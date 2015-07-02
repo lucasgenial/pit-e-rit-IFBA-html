@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="robots" content="ALL" />
+        <title>Form PIT - Modelo 2</title>
+        <link href="img/favicon-oficial.ico" rel="icon" type="image/x-icon" />
+
+        <!-- Chamada do Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+
+        <!-- Chamada do CSS de personalização // Sempre usar abaixo da chamada do CSS principal-->
+        <link rel="stylesheet" href="css/extra.css">
+
+        <!-- Chamada para o JQUERY -->
+        <script src="js/jquery-1.11.3.js"></script>
+
+        <!-- Chamada do JavaScript do Bootstrap -->
+        <script src="js/bootstrap.js"></script>
+
+        <!-- Chamada do JavaScript do TinyMCE -->
+        <script src="js/tinymce/tinymce.min.js" type="text/javascript"></script>
+        <script src="js/tinymce/tinymce_config.js" type="text/javascript"></script>
+
+        <!-- Chamada dos Scripts das datas -->
+        <link href="js/datepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css"/>
+        <script src="js/datepicker/moment-with-locales.js" type="text/javascript"></script>
+        <script src="js/datepicker/js/bootstrap-datetimepicker.js" type="text/javascript"></script>
+        <!--        <script src="js/datepicker/bootstrap-datetimepicker-config.js" type="text/javascript"></script>-->
+
+        <!-- Chamada dos Scripts do file Input -->
+        <link href="js/file-input/css/fileinput.css" rel="stylesheet" type="text/css"/>
+        <script src="js/file-input/js/fileinput.js" type="text/javascript"></script>
+        <script src="js/file-input/js/fileinput_locale_pt-BR.js" type="text/javascript"></script>
+
+        <!--Chamada do script das validações -->
+        <script language="javascript" src="Validacoes/validacoes.js"></script>
+        <script language="javascript" src="Validacoes/validacoesDATAS.js"></script>
+
+    </head>
+    <body>
+
+        <div class="container-fluid" >
+            <!-- Area da Barra no TOPO -->
+            <div class="row">
+                <nav class="navbar navbar-default">
+
+                    <!-- LOGO do projeto -->
+                    <div class="col-md-offset-1 col-md-2">
+                        <a href="#"><img src="img/Logo - IFBA.png" class="logo-principal" alt="Logo do IFBA"/></a>
+                    </div>
+
+                    <!-- NOME do projeto -->
+                    <div class="col-md-6 navbar-nome-projeto">
+                        <h5>PIT/RIT</h5>
+                        <h6>Plano Individual de Trabalho</h6>
+                        <h6>Relatório Individual de Trabalho</h6>
+                    </div>
+
+                    <!-- Identificação Usuário -->
+
+                    <div class="col-md-2 dropdown">
+                        <div class="dropdown">
+                            <div class="foto-usuario">
+                                <img src="img/foto_user.png" alt="Foto do Perfil do Usuário"/><br>
+                            </div>
+
+                            <div>
+                                <span>Bem Vindo,</span><br>
+                                <a href="#" class="dropdown-toggle" id="menu1" data-toggle="dropdown">
+                                    <span>João Andrade</span>
+                                </a>
+                                <span class="caret"></span>
+
+                                <!-- Abre as opções do menu -->
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                    <li role="presentation">
+                                        <a href="formularioPerfil.html"><span class="glyphicon glyphicon-cog"></span> Perfil</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="ajuda.html"><span class="glyphicon glyphicon-question-sign"></span> Ajuda</a>
+                                    </li>
+                                    <li role="presentation" class="divider"></li>
+                                    <li role="presentation">
+                                        <a href="#"><span class="glyphicon glyphicon-off"></span> Sair</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Area Central -->
+            <div class="area-central">
+                <!--             Area destina a alertas 
+                            <div class="col-md-offset-2 col-md-8 alert alert-info alert-dismissible fade in" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4>Prezados servidores,</h4>
+                                <p>A Pró-Reitoria de Ensino tem recebido diversas solicitações e demandas para solução de problemas
+                                    que decorrem do desconhecimento ou da não aplicação das normas do IFBA para a gestão academica.
+                                    Cientes da importancia de atuar dentro do principio da legalidade, ressaltamos a importância de
+                                    observar os documentos institucionais que regulamentam a distribuição da carga horária docente e
+                                    o funcionamento dos cursos do IFBA na prática diária da instituição.</p><br>
+                                <p>
+                                    Com vistas a garantir a indissociabilidade do ensino, pesquisa e extensão, sem comprometer a oferta
+                                    academica que deve garantir aos alunos, apresentamos o NOME DO PROJETO, para a elaboração do Plano 
+                                    Individual de Trabalho (PIT) e do Relatório Individua de Trabalho (RIT).
+                                </p><br>
+                
+                                <p>
+                                    O PIT e o RIT são instrumentos de planejamento e monitoramento, elaborados pelos docentes, que devem ser
+                                    observados pela Diretoria de Ensino do Campus. 
+                                </p><br>
+                                <p>
+                                    <button type="button" class="btn btn-danger">Estou Ciente</button>
+                                </p>
+                            </div>-->
+
+                <!-- Cria-se a DIV cinza superior a branca -->
+                <div class="col-md-offset-2 col-md-8 principal-cinza-top">
+                    <ol class="breadcrumb">
+                        <li><a href="#">Inicio</a></li>
+                        <li class="active"><a href="#">Relatório de PIT</a></li>
+                        <li class="active"><a href="#">Formulário de Preenchimento do PIT</a></li>
+                    </ol>
+                </div>
+
+                <!-- Cria-se a DIV branca -->
+                <div class="col-md-offset-2 col-md-8 principal-branco">
+                    <!-- Inicio do Formulário -->
+                    <form>
+                        <div class="panel-group" id="accordion">
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <!-- Cria-se um painel para fazer o efeito sanfona -->
+                                    <div class="panel">
+                                        <fieldset class="bordas">
+                                            <legend class="panel-heading">
+                                                <a class="" data-toggle="collapse" data-parent="#accordion" href="#formularioPeriodo">
+                                                    1. Periodo de Referência
+                                                </a>
+                                            </legend>
+
+                                            <!-- collapse in: Estado inicial Aberto / collapse out: Estado Inicial Fechado -->
+                                            <div id="formularioPeriodo" class="collapse out">
+                                                <div class="col-md-3">
+                                                    <label>Semestre</label>
+                                                    <select class="form-control input-sm" required>
+                                                        <option>Selecione</option>
+                                                        <option>1º Semestre</option>
+                                                        <option>2º Semestre</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label>Ano</label>
+                                                    <input type="text"  maxlength="4" onkeypress='return SomenteNumero(event)' class="form-control input-sm" aria-label="..." placeholder="Ano" required>
+                                                </div>
+                                            </div>
+
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- EDIÇÃO DO CAMPO ENSINO -->
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <!-- Cria-se um painel para fazer o efeito sanfona -->
+                                    <div class="panel">
+                                        <fieldset class="bordas">
+                                            <legend class="panel-heading">
+                                                <a class="" data-toggle="collapse" data-parent="#accordion" href="#formularioEnsino">
+                                                    2. Ensino
+                                                </a>
+                                            </legend>
+
+                                            <!-- collapse in: Estado inicial Aberto / collapse out: Estado Inicial Fechado -->
+                                            <div id="formularioEnsino" class="collapse out">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-3">
+                                                            <label>Tipo Atividade</label>
+                                                            <select class="form-control input-sm" required>
+                                                                <option>Selecione</option>
+                                                                <option>Aula</option>
+                                                                <option>Seminario</option>
+                                                                <option>Palestras</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <label>Descrição da Atividade</label>
+                                                            <input type="text" class="form-control input-sm" aria-label="..." placeholder="Informe uma descrição da atividade" required>
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <label>Curso</label>
+                                                            <select class="form-control input-sm" required>
+                                                                <option>Selecione</option>
+                                                                <option>Licenciatura em Computação</option>
+                                                                <option>Licenciatura em Quimica</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <label>Disciplina</label>
+                                                            <select class="form-control input-sm" required>
+                                                                <option>Selecione</option>
+                                                                <option>LPPOI - Ling. de Prog. Orientado a Objetos I</option>
+                                                                <option>LPPOII - Ling. de Prog. Orientado a Objetos II</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <label>C/H Semanal</label>
+                                                            <input type="text" onkeypress='return SomenteNumero(event)' class="form-control input-sm" aria-label="..." placeholder="Informe" required>
+                                                        </div>    
+                                                    </div>
+                                                </div>
+
+                                                <!-- Botão Incluir Atividade -->
+                                                <div class="row">
+                                                    <div class="col-md-offset-10 btn-incluir">
+                                                        <button type="button" class="btn btn-primary col-md-10">Incluir</button>
+                                                    </div>
+                                                </div>
+                                                <!-- Fim do Botão Incluir Atividade -->
+
+                                                <!-- INICIO DA TABELA ENSINO -->
+                                                <div class="row bordas-tabelas">
+                                                    <!-- Inicio da Edição da Tabela -->
+                                                    <div class="col-md-12" data-example-id="hoverable-table">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="">ATIVIDADE</th>
+                                                                    <th class="">DISCIPLINA</th>
+                                                                    <th class="">TURMA</th>
+                                                                    <th class="">CURSO</th>
+                                                                    <th class="">C/H <br>SEMANAL</th>
+                                                                    <th class="">AÇÕES</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Aulas</td>
+                                                                    <td>Linguagem de Programação</td>
+                                                                    <td>98121</td>
+                                                                    <td>Técnico de Info...</td>
+                                                                    <td>30</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Aulas</td>
+                                                                    <td>Linguagem de Programação</td>
+                                                                    <td>98121</td>
+                                                                    <td>Técnico de Info...</td>
+                                                                    <td>30</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Aulas</td>
+                                                                    <td>Linguagem de Programação</td>
+                                                                    <td>98121</td>
+                                                                    <td>Técnico de Info...</td>
+                                                                    <td>30</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Aulas</td>
+                                                                    <td>Linguagem de Programação</td>
+                                                                    <td>98121</td>
+                                                                    <td>Técnico de Info...</td>
+                                                                    <td>30</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Aulas</td>
+                                                                    <td>Linguagem de Programação</td>
+                                                                    <td>98121</td>
+                                                                    <td>Técnico de Info...</td>
+                                                                    <td>30</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Aulas</td>
+                                                                    <td>Linguagem de Programação</td>
+                                                                    <td>98121</td>
+                                                                    <td>Técnico de Info...</td>
+                                                                    <td>30</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- Fim do campo destinado à Tabela -->
+                                                </div>
+                                                <!-- FIM DA TABELA ENSINO -->
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM DO CAMPO DESTINADO ENSINO -->
+
+                            <!-- EDIÇÃO DO CAMPO PESQUISA -->
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <!-- Cria-se um painel para fazer o efeito sanfona -->
+                                    <div class="panel">
+                                        <fieldset class="bordas">
+                                            <legend class="panel-heading">
+                                                <a class="" data-toggle="collapse" data-parent="#accordion" href="#formularioPesquisa">
+                                                    3. Pesquisa
+                                                </a>
+                                            </legend>
+                                            <div id="formularioPesquisa" class="collapse out">
+                                                <div class="col-md-12">
+                                                    <label>Título do Projeto</label>
+                                                    <input type="text" class="form-control input-sm" aria-label="..." placeholder="Informe o título do projeto" required>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <label>Linha de Pesquisa</label>
+                                                    <select class="form-control input-sm" required>
+                                                        <option>Selecione</option>
+                                                        <option>Licenciatura em Computação</option>
+                                                        <option>Licenciatura em Quimica</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <label>Grupo de Pesquisa</label>
+                                                    <select class="form-control input-sm" required>
+                                                        <option>Selecione</option>
+                                                        <option>LPPOI - Ling. de Prog. Orientado a Objetos I</option>
+                                                        <option>LPPOII - Ling. de Prog. Orientado a Objetos II</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label>C/H Semanal</label>
+                                                    <input type="text" onkeypress='return SomenteNumero(event)' class="form-control input-sm" aria-label="..." placeholder="Informe" required>
+                                                </div>
+
+                                                <!-- TEXTAREA -->
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <fieldset class="bordas-tiny">
+                                                            <legend>Informe os resultados Esperados</legend>
+                                                            <textarea></textarea> 
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+                                                <!-- FIM TEXTAREA -->
+
+                                                <!-- Botão Incluir Ensino -->
+                                                <div class="row">
+                                                    <div class="col-md-offset-10 btn-incluir">
+                                                        <button type="button" class="btn btn-primary col-md-10">Incluir</button>
+                                                    </div>
+                                                </div>
+                                                <!-- Fim do Botão Incluir Ensino -->
+
+                                                <!-- INICIO DA TABELA ENSINO -->
+                                                <div class="row bordas-tabelas">
+                                                    <!-- Inicio da Edição da Tabela -->
+                                                    <div class="col-md-12" data-example-id="hoverable-table">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="">TÍTULO</th>
+                                                                    <th class="">LINHA DE PESQUISA</th>
+                                                                    <th class="">GRUPO DE PESQUISA</th>
+                                                                    <th class="">CURSO</th>
+                                                                    <th class="">C/H <br>SEMANAL</th>
+                                                                    <th class="">AÇÕES</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Aulas</td>
+                                                                    <td>Ling. de Programação</td>
+                                                                    <td>98121</td>
+                                                                    <td>Técnico de Info...</td>
+                                                                    <td>30</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Aulas</td>
+                                                                    <td>Ling. de Programação</td>
+                                                                    <td>98121</td>
+                                                                    <td>Técnico de Info...</td>
+                                                                    <td>30</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Aulas</td>
+                                                                    <td>Ling. de Programação</td>
+                                                                    <td>98121</td>
+                                                                    <td>Técnico de Info...</td>
+                                                                    <td>30</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Aulas</td>
+                                                                    <td>Ling. de Programação</td>
+                                                                    <td>98121</td>
+                                                                    <td>Técnico de Info...</td>
+                                                                    <td>30</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Aulas</td>
+                                                                    <td>Ling. de Programação</td>
+                                                                    <td>98121</td>
+                                                                    <td>Técnico de Info...</td>
+                                                                    <td>30</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Aulas</td>
+                                                                    <td>Ling. de Programação</td>
+                                                                    <td>98121</td>
+                                                                    <td>Técnico de Info...</td>
+                                                                    <td>30</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- Fim do campo destinado à Tabela -->
+                                                </div>
+                                            </div>
+                                            <!-- FIM DA TABELA ENSINO -->
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM DO CAMPO DE EDIÇÃO DE PESQUISA -->
+
+                            <!-- EDIÇÃO DO CAMPO DE EXTENSÃO -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="panel">
+                                        <fieldset class="bordas">
+                                            <legend>
+                                                <a class="" data-toggle="collapse" data-parent="#accordion" href="#formularioExtensao">
+                                                    4. Extensão
+                                                </a>
+                                            </legend>
+
+                                            <div id="formularioExtensao" class="collapse out">
+                                                <div class="col-md-12">
+                                                    <label>Curso/Serviço</label>
+                                                    <input type="text" class="form-control input-sm" aria-label="..." placeholder="Informe uma descrição da atividade de extensão" required>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <label>Público Alvo</label>
+                                                    <input type="text" class="form-control input-sm" aria-label="..." placeholder="Informe o público alvo" required>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <fieldset class="bordas-periodo">
+                                                        <legend>Periodo</legend>
+                                                        <div class='col-md-4'>
+                                                            <div class="form-group">
+                                                                <label>Data Inicial</label>
+                                                                <div class='input-group date' id='DataInicial'>
+                                                                    <input id="data1" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data_01(this)"/>
+                                                                    <span class="input-group-addon">
+                                                                        <span class="glyphicon glyphicon-calendar small"></span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class='col-md-4'>
+                                                            <div class="form-group">
+                                                                <label>Data Final</label>
+                                                                <div class='input-group date' id="DataFinal">
+                                                                    <input id="data2" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data_01(this)"/>
+                                                                    <span class="input-group-addon">
+                                                                        <span class="glyphicon glyphicon-calendar small"></span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label>C/H Semanal</label>
+                                                            <input type="text" onkeypress='return SomenteNumero(event)' class="form-control input-sm" aria-label="..." placeholder="Informe" required>
+                                                        </div>
+
+                                                        <script type="text/javascript">
+                                                            $(function () {
+                                                                $('#DataInicial').datetimepicker({
+                                                                    locale: 'pt-BR',
+                                                                    disabledTimeIntervals: false,
+                                                                    format: 'L'
+                                                                });
+                                                                $('#DataFinal').datetimepicker({
+                                                                    locale: 'pt-BR',
+                                                                    disabledTimeIntervals: false,
+                                                                    format: 'L'
+                                                                });
+                                                                $("#DataInicial").on("dp.change", function (e) {
+                                                                    $('#DataFinal').data("DateTimePicker").minDate(e.date);
+                                                                });
+                                                                $("#DataFinal").on("dp.change", function (e) {
+                                                                    $('#DataInicial').data("DateTimePicker").maxDate(e.date);
+                                                                });
+                                                            });
+                                                        </script>
+                                                    </fieldset>
+                                                </div>
+
+
+                                                <!-- TEXTAREA -->
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <fieldset class="bordas-tiny">
+                                                            <legend>Informe os resultados Esperados</legend>
+                                                            <textarea></textarea> 
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+                                                <!-- FIM TEXTAREA -->
+
+                                                <!-- Botão Incluir Ensino -->
+                                                <div class="row">
+                                                    <div class="col-md-offset-10 btn-incluir">
+                                                        <button type="button" class="btn btn-primary col-md-10">Incluir</button>
+                                                    </div>
+                                                </div>
+                                                <!-- Fim do Botão Incluir Ensino -->
+
+                                                <!-- INICIO DA TABELA ENSINO -->
+                                                <div class="row bordas-tabelas">
+                                                    <!-- Inicio da Edição da Tabela -->
+                                                    <div class="col-md-12" data-example-id="hoverable-table">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="">CURSO/SERVIÇO</th>
+                                                                    <th class="">PÚBLICO ALVO</th>
+                                                                    <th class="">PERÍODO</th>
+                                                                    <th class="">C/H <br>TOTAL</th>
+                                                                    <th class="">C/H <br>SEMANAL</th>
+                                                                    <th class="">AÇÕES</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Extensão Ativa - Ok</td>
+                                                                    <td>Graduandos Licenciatura</td>
+                                                                    <td>01/02/15 a 14/06/15</td>
+                                                                    <td>300</td>
+                                                                    <td>4</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- Fim do campo destinado à Tabela -->
+                                                </div>    
+                                            </div>
+
+                                            <!-- FIM DA TABELA ENSINO -->
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM DO CAMPO DE EDIÇÃO DE EXTENSÃO -->
+
+                            <!-- EDIÇÃO DO CAMPO ATIVIDADES ADMINISTRATIVAS -->
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <div class="panel">
+                                        <fieldset class="bordas">
+                                            <legend>
+                                                <a class="" data-toggle="collapse" data-parent="#accordion" href="#formularioAtividadesAdm">
+                                                    5. Atividades Administrativas
+                                                </a>
+                                            </legend>
+                                            <div id="formularioAtividadesAdm" class="collapse out">
+                                                <div class="col-md-12">
+                                                    <label>Função</label>
+                                                    <input type="text" class="form-control input-sm" aria-label="..." placeholder="Informe a função" required>
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    <fieldset class="bordas-periodo">
+                                                        <legend>Periodo</legend>
+                                                        <div class='col-md-4'>
+                                                            <div class="form-group">
+                                                                <label>Data Inicial</label>
+                                                                <div class='input-group date' id='DataInicial2'>
+                                                                    <input id="data3" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data_02(this)"/>
+                                                                    <span class="input-group-addon">
+                                                                        <span class="glyphicon glyphicon-calendar small"></span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class='col-md-4'>
+                                                            <div class="form-group">
+                                                                <label>Data Final</label>
+                                                                <div class='input-group date' id="DataFinal2">
+                                                                    <input id="data4" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data_02(this)"/>
+                                                                    <span class="input-group-addon">
+                                                                        <span class="glyphicon glyphicon-calendar small"></span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label>C/H Semanal</label>
+                                                            <input type="text" onkeypress='return SomenteNumero(event)' class="form-control input-sm" aria-label="..." placeholder="Informe" required>
+                                                        </div>
+
+                                                        <script type="text/javascript">
+                                                            $(function () {
+                                                                $('#DataInicial2').datetimepicker({
+                                                                    locale: 'pt-BR',
+                                                                    disabledTimeIntervals: false,
+                                                                    format: 'L'
+                                                                });
+                                                                $('#DataFinal2').datetimepicker({
+                                                                    locale: 'pt-BR',
+                                                                    disabledTimeIntervals: false,
+                                                                    format: 'L'
+                                                                });
+                                                                $("#DataInicial2").on("dp.change", function (e) {
+                                                                    $('#DataFinal2').data("DateTimePicker").minDate(e.date);
+                                                                });
+                                                                $("#DataFinal2").on("dp.change", function (e) {
+                                                                    $('#DataInicial2').data("DateTimePicker").maxDate(e.date);
+                                                                });
+                                                            });
+                                                        </script>
+                                                    </fieldset>
+                                                </div>
+
+                                                <!-- TEXTAREA -->
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <fieldset class="bordas-tiny">
+                                                            <legend>Descrição das Atividades Previstas Inerente a Função Desempenhada</legend>
+                                                            <textarea></textarea> 
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+                                                <!-- FIM TEXTAREA -->
+
+                                                <!-- TEXTAREA -->
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <fieldset class="bordas-tiny">
+                                                            <legend>Produtos e Resultados Esperados</legend>
+                                                            <textarea></textarea> 
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+                                                <!-- FIM TEXTAREA -->
+
+                                                <!-- Botão Incluir Ensino -->
+                                                <div class="row">
+                                                    <div class="col-md-offset-10 btn-incluir">
+                                                        <button type="button" class="btn btn-primary col-md-10">Incluir</button>
+                                                    </div>
+                                                </div>
+                                                <!-- Fim do Botão Incluir Ensino -->
+
+                                                <!-- INICIO DA TABELA ATIVIDADES ADMINISTRATIVAS -->
+                                                <div class="row bordas-tabelas">
+                                                    <!-- Inicio da Edição da Tabela -->
+                                                    <div class="col-md-12" data-example-id="hoverable-table">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="">FUNÇÃO</th>
+                                                                    <th class="">PERÍODO</th>
+                                                                    <th class="">C/H <br>SEMANAL</th>
+                                                                    <th class="">AÇÕES</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Diretor de Ensino</td>
+                                                                    <td>01/02/15 a 14/06/15</td>
+                                                                    <td>4</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Tesoureiro</td>
+                                                                    <td>01/02/15 a 14/06/15</td>
+                                                                    <td>4</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- Fim do campo destinado à Tabela -->
+                                                </div>
+                                                <!-- FIM DA TABELA ATIVIDADES ADMINISTRATIVAS -->
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM DA EDIÇÃO DO CAMPO ATIVIDADES ADMINISTRATIVAS -->
+
+                            <!-- EDIÇÃO DO CAMPO TREINAMENTO E APERFEIÇOAMENTO -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="panel">
+
+                                        <fieldset class="bordas">
+                                            <legend>
+                                                <a class="" data-toggle="collapse" data-parent="#accordion" href="#formularioTreinamentoAperf">
+                                                    6. Treinamento e Aperfeiçoamento
+                                                </a>
+                                            </legend>
+
+                                            <div id="formularioTreinamentoAperf" class="collapse out">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-3">
+                                                            <label>Tipo Atividade/Evento</label>
+                                                            <select class="form-control input-sm" required>
+                                                                <option>Selecione</option>
+                                                                <option>Aula</option>
+                                                                <option>Seminario</option>
+                                                                <option>Palestras</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <label>Descrição da Atividade/Evento</label>
+                                                            <input type="text" class="form-control input-sm" aria-label="..." placeholder="Informe uma descrição da atividade" required>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label>Area de Conhecimento</label>
+                                                            <select class="form-control input-sm" required>
+                                                                <option>Selecione</option>
+                                                                <option>Computação</option>
+                                                                <option>Quimica</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <label>Instituição</label>
+                                                            <select class="form-control input-sm" required>
+                                                                <option>Selecione</option>
+                                                                <option>IFBA - Instituto Federal da Bahia</option>
+                                                                <option>UNEB - Universidade Estadual da Bahia</option>
+                                                                <option>UFSBA - Universidade do Sul da Bahia</option>
+                                                                <option>UESC - Universidade Estadual de Santa Cruz</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <fieldset class="bordas-periodo">
+                                                                <legend>Periodo</legend>
+                                                                <div class='col-md-4'>
+                                                                    <div class="form-group">
+                                                                        <label>Data Inicial</label>
+                                                                        <div class='input-group date' id='DataInicial3'>
+                                                                            <input id="data5" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data_03(this)"/>
+                                                                            <span class="input-group-addon">
+                                                                                <span class="glyphicon glyphicon-calendar small"></span>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class='col-md-4'>
+                                                                    <div class="form-group">
+                                                                        <label>Data Final</label>
+                                                                        <div class='input-group date' id="DataFinal3">
+                                                                            <input id="data6" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data_03(this)"/>
+                                                                            <span class="input-group-addon">
+                                                                                <span class="glyphicon glyphicon-calendar small"></span>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label>C/H TOTAL</label>
+                                                                    <input type="text" onkeypress='return SomenteNumero(event)' class="form-control input-sm" aria-label="..." placeholder="Informe" required>
+                                                                </div>
+
+                                                                <script type="text/javascript">
+                                                                    $(function () {
+                                                                        $('#DataInicial3').datetimepicker({
+                                                                            locale: 'pt-BR',
+                                                                            disabledTimeIntervals: false,
+                                                                            format: 'L'
+                                                                        });
+                                                                        $('#DataFinal3').datetimepicker({
+                                                                            locale: 'pt-BR',
+                                                                            disabledTimeIntervals: false,
+                                                                            format: 'L'
+                                                                        });
+                                                                        $("#DataInicial3").on("dp.change", function (e) {
+                                                                            $('#DataFinal3').data("DateTimePicker").minDate(e.date);
+                                                                        });
+                                                                        $("#DataFinal3").on("dp.change", function (e) {
+                                                                            $('#DataInicial3').data("DateTimePicker").maxDate(e.date);
+                                                                        });
+                                                                    });
+
+                                                                </script>
+                                                            </fieldset>
+                                                        </div>										
+                                                    </div>
+                                                </div>
+
+                                                <!-- Botão Incluir Atividade -->
+                                                <div class="row">
+                                                    <div class="col-md-offset-10 btn-incluir">
+                                                        <button type="button" class="btn btn-primary col-md-10">Incluir</button>
+                                                    </div>
+                                                </div>
+                                                <!-- Fim do Botão Incluir Atividade -->
+
+                                                <!-- INICIO DA TABELA TREINAMETO E APERFEIÇOAMENTO -->
+                                                <div class="row bordas-tabelas">
+                                                    <!-- Inicio da Edição da Tabela -->
+                                                    <div class="col-md-12" data-example-id="hoverable-table">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="">ATIVIDADE</th>
+                                                                    <th class="">DESCRIÇÃO</th>
+                                                                    <th class="">PERIODO</th>
+                                                                    <th class="">INSTITUIÇÃO</th>
+                                                                    <th class="">C/H <br>TOTAL</th>
+                                                                    <th class="">AÇÕES</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Pós-graduação</td>
+                                                                    <td>Mestrado em Modelagem Computacional</td>
+                                                                    <td>01/02/15 a <br>14/06/15</td>
+                                                                    <td>IFBA</td>
+                                                                    <td>800</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Pós-graduação</td>
+                                                                    <td>Mestrado em Modelagem Computacional</td>
+                                                                    <td>01/02/15 a <br>14/06/15</td>
+                                                                    <td>IFBA</td>
+                                                                    <td>800</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- Fim do campo destinado à Tabela -->
+                                                </div>
+                                                <!-- FIM DA TABELA TREINAMETO E APERFEIÇOAMENTO -->
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM DO CAMPO TREINAMENTO E APERFEIÇOAMENTO -->
+
+                            <!-- EDIÇÃO DO CAMPO OUTRAS ATIVIDADES -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="panel">
+                                        <fieldset class="bordas">
+                                            <legend>
+                                                <a class="" data-toggle="collapse" data-parent="#accordion" href="#formularioOutrasAtiv">
+                                                    7. Outras Atividades
+                                                </a>
+                                            </legend>
+
+                                            <div id="formularioOutrasAtiv" class="collapse out">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-3">
+                                                            <label>Tipo Atividade/Evento</label>
+                                                            <input type="text" class="form-control input-sm" aria-label="..." placeholder="Informe o tipo da atividade" required>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <label>Descrição da Atividade/Evento</label>
+                                                            <input type="text" class="form-control input-sm" aria-label="..." placeholder="Informe uma descrição da atividade" required>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <fieldset class="bordas-periodo">
+                                                                <legend>Periodo</legend>
+                                                                <div class='col-md-4'>
+                                                                    <div class="form-group">
+                                                                        <label>Data Inicial</label>
+                                                                        <div class='input-group date' id='DataInicial4'>
+                                                                            <input id="data7" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data_04(this)"/>
+                                                                            <span class="input-group-addon">
+                                                                                <span class="glyphicon glyphicon-calendar small"></span>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class='col-md-4'>
+                                                                    <div class="form-group">
+                                                                        <label>Data Final</label>
+                                                                        <div class='input-group date' id="DataFinal4">
+                                                                            <input id="data8" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data_04(this)" />
+                                                                            <span class="input-group-addon">
+                                                                                <span class="glyphicon glyphicon-calendar small"></span>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label>C/H TOTAL</label>
+                                                                    <input type="text" onkeypress='return SomenteNumero(event)' class="form-control input-sm" aria-label="..." placeholder="Informe" required>
+                                                                </div>
+
+                                                                <script type="text/javascript">
+                                                                    $(function () {
+                                                                        $('#DataInicial4').datetimepicker({
+                                                                            locale: 'pt-BR',
+                                                                            disabledTimeIntervals: false,
+                                                                            format: 'L'
+                                                                        });
+                                                                        $('#DataFinal4').datetimepicker({
+                                                                            locale: 'pt-BR',
+                                                                            disabledTimeIntervals: false,
+                                                                            format: 'L'
+                                                                        });
+                                                                        $("#DataInicial4").on("dp.change", function (e) {
+                                                                            $('#DataFinal4').data("DateTimePicker").minDate(e.date);
+                                                                        });
+                                                                        $("#DataFinal4").on("dp.change", function (e) {
+                                                                            $('#DataInicial4').data("DateTimePicker").maxDate(e.date);
+                                                                        });
+                                                                    });
+
+                                                                </script>
+                                                            </fieldset>
+                                                        </div>											
+                                                    </div>
+                                                </div>
+
+                                                <!-- Botão Incluir Atividade -->
+                                                <div class="row">
+                                                    <div class="col-md-offset-10 btn-incluir">
+                                                        <button type="button" class="btn btn-primary col-md-10">Incluir</button>
+                                                    </div>
+                                                </div>
+                                                <!-- Fim do Botão Incluir Atividade -->
+
+                                                <!-- INICIO DA TABELA OUTRAS ATIVIDADES -->
+                                                <div class="row bordas-tabelas">
+                                                    <!-- Inicio da Edição da Tabela -->
+                                                    <div class="col-md-12" data-example-id="hoverable-table">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="">ATIVIDADE</th>
+                                                                    <th class="">DESCRIÇÃO</th>
+                                                                    <th class="">PERIODO</th>
+                                                                    <th class="">C/H <br>TOTAL</th>
+                                                                    <th class="">AÇÕES</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Pesquisa</td>
+                                                                    <td>Participação com Supervisor do PIBID - Lic. em Computação</td>
+                                                                    <td>01/02/15 a <br>14/06/15</td>
+                                                                    <td>800</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Pesquisa</td>
+                                                                    <td>Participação com Supervisor do PIBID - Lic. em Quimica</td>
+                                                                    <td>01/02/15 a <br>14/06/15</td>
+                                                                    <td>800</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- Fim do campo destinado à Tabela -->
+                                                </div>
+                                                <!-- FIM DA TABELA OUTRAS ATIVIDADES -->
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM DO CAMPO OUTRAS ATIVIDADES -->
+
+                            <!-- EDIÇÃO DO CAMPO RESUMO DA DISTRIBUIÇÃO DA CARGA HORÁRIA -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="panel">
+                                        <fieldset class="bordas">
+                                            <legend>
+                                                <a class="" data-toggle="collapse" data-parent="#accordion" href="#formularioResumo">
+                                                    8. Resumo da Distribuição da Carga Horária
+                                                </a>
+                                            </legend>
+
+                                            <div id="formularioResumo" class="collapse out">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-8">
+                                                            <label>Tipo Atividade/Evento</label>
+                                                            <input type="text" class="form-control input-sm" aria-label="..." placeholder="Informe o tipo da atividade" required>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <label>C/H Total</label>
+                                                            <input type="text" onkeypress='return SomenteNumero(event)' class="form-control input-sm" aria-label="..." placeholder="Informe" required>
+                                                        </div>
+                                                        <div class="col-md-2 btn-incluir" >
+                                                            <br>
+                                                            <button type="button" class="btn btn-primary col-md-12">Incluir</button>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <!-- INICIO DA TABELA RESUMO -->
+                                                <div class="row bordas-tabelas">
+                                                    <!-- Inicio da Edição da Tabela -->
+                                                    <div class="col-md-12" data-example-id="hoverable-table">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="">TIPO DE ATIVIDADE</th>
+                                                                    <th class="">C/H TOTAL</th>
+                                                                    <th class="">AÇÕES</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Pesquisa</td>
+                                                                    <td>800</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Participação com Supervisor do PIBID - Lic. em Quimica</td>
+                                                                    <td>80</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- Fim do campo destinado à Tabela -->
+                                                </div>
+                                                <!-- FIM DA TABELA RESUMO -->
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM DO CAMPO RESUMO DA DISTRIBUIÇÃO DA CARGA HORÁRIA -->
+
+                            <!-- EDIÇÃO DO CAMPO ANEXOS -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="panel">
+                                        <fieldset class="bordas">
+                                            <legend>
+                                                <a class="" data-toggle="collapse" data-parent="#accordion" href="#formularioAnexos">
+                                                    9. Anexos
+                                                </a>
+                                            </legend>
+
+                                            <div id="formularioAnexos" class="collapse out">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-12">
+                                                            <label>Descrição do Anexo</label>
+                                                            <input id="descricao" name="descricao" type="text" class="form-control input-sm" aria-label="..." placeholder="Informe o tipo da atividade" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-12">
+                                                            <label>Carregar Arquivo (Extensões permitidas pdf, img, jpg)</label>
+                                                            <input id="anexos" type="file" class="file input-sm">
+                                                            <div id="blocoDeExibicaoErrosUpload" class="help-block"></div>
+                                                            <!-- Customização das Configurações do Plugin File Inputs -->
+                                                            <script src="js/file-input/file-input-config.js" type="text/javascript"></script>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- INICIO DA TABELA ENSINO -->
+                                                <div class="row bordas-tabelas">
+                                                    <!-- Inicio da Edição da Tabela -->
+                                                    <div class="col-md-12" data-example-id="hoverable-table">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="">DESCRIÇÃO</th>
+                                                                    <th class="">AÇÕES</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Apresentação do Projeto PIBID -2015</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Declaração Mestrado</td>
+                                                                    <td>
+                                                                        <nav>
+                                                                            <a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a>
+                                                                            <a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                                                                        </nav> 
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- Fim do campo destinado à Tabela -->
+                                                </div>
+                                                <!-- FIM DA TABELA ENSINO -->
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIM DO CAMPO ANEXOS -->
+
+                            <!-- BOTÕES DA PAGINA -->
+                            <div class="col-md-offset-8 col-md-2">
+                                <button type="button" class="btn btn-success">SALVAR</button>
+                            </div>
+                            <div class="col-md-2">
+                                <button type="button" onclick="Cancelar('telaRelatorioDePIT.html')" class="btn btn-danger">CANCELAR</button>
+                            </div>
+                            <!-- Fim do Botão Adicionar Novo-->
+                        </div>
+                    </form>
+                    <!-- FIM DO FORMULÁRIO -->
+                </div>
+                <!-- Cria-se a DIV cinza inferior a branca -->
+                <div class="col-md-offset-2 col-md-8 principal-cinza-bottom"></div>
+            </div>
+
+            <!-- Area do Rodapé -->
+            <div class="row">
+                <footer class="rodape col-md-12">
+
+                    <p>Aplicativo desenvolvido pelos alunos do curso de Licenciatura em Computação<br>
+                        <a href="#" target="_blank">@LucasMatos</a>,
+                        <a href="#" target="_blank">@KellyFreitas</a> e 
+                        <a href="#" target="_blank">@WallaceFernandes</a>.
+                    </p>
+
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="robots" content="ALL" />
+        <title>PIT/RIT - IFBA - Formulário RIT</title>
+        <link href="img/favicon-oficial.ico" rel="icon" type="image/x-icon" />
+
+        <!-- Chamada do Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+
+        <!-- Chamada do CSS de personalização // Sempre usar abaixo da chamada do CSS principal-->
+        <link rel="stylesheet" href="css/impressao.css">
+
+        <!-- Chamada para o JQUERY -->
+        <script src="js/jquery-1.11.3.js" type="text/javascript"></script>
+
+        <!-- Chamada do Plugin jsPDF -->
+
+
+        <!-- Chamada do JavaScript do Bootstrap -->
+        <script src="js/bootstrap.js" type="text/javascript"></script>
+
+    </head>
+    <body>
+        <div id="Imprimir" class="container">
+
+            <!-- CORPO do Documento -->
+            <div class="col-md-12">
+
+                <!-- TOPO DO Documento -->
+                <div class="col-md-12 bordas">
+                    <div class="topo">
+                        <!-- Logo do IFBA -->
+                        <div class="col-md-3 ">
+                            <img src="img/Logo - IFBA.png" class="logo-principal" alt="Logo do IFBA"/>
+                        </div>
+                    </div>
+                </div>
+                <!-- CONTEUDO do Documento -->
+                <div class="col-md-12">
+
+                    <!-- Nome do Projeto -->
+                    <div class="col-md-12">
+                        <h5><b>Plano Individual de Trabalho</b></h5>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- CAMPO PERIODO DE REFERENCIA -->
+                            <fieldset class="bordas">
+                                <legend>1. Periodo de Referência</legend>
+
+                                <!-- Semestre -->
+                                <div class="col-md-3">
+                                    <label>Semestre:</label>
+                                    <div class="resposta">1º Semestre</div>
+                                </div>
+
+                                <!-- Semestre -->
+                                <div class="col-md-3">
+                                    <label>Ano:</label>
+                                    <div class="resposta">2015</div>
+                                </div>
+                            </fieldset>
+
+                            <!-- CAMPO IDENTIFICAÇÃO DO DOCENTE -->
+                            <fieldset class="bordas">
+                                <legend>2. Identificação do Docente</legend>
+
+                                <!-- Nome -->
+                                <div class="col-md-12">
+                                    <label>Nome:</label>
+                                    <div class="resposta">DIOGO PEREIRA SILVA DE NOVAIS</div>
+                                </div>
+
+                                <!-- Numero do SIAPE -->
+                                <div class="col-md-3">
+                                    <label>Nº SIAPE:</label>
+                                    <div class="resposta">1962524</div>
+                                </div>
+
+                                <!-- Classe e Referência -->
+                                <div class="col-md-3">
+                                    <label>Classe e Referência:</label>
+                                    <div class="resposta">D-2 Nível 1</div>
+                                </div>
+
+                                <!-- Regime de Trabalho -->
+                                <div class="col-md-6">
+                                    <label>Regime de Trabalho: </label>
+                                    <div class="resposta">Dedicação Exclusiva - 40 horas</div>
+                                </div>
+
+                                <!-- Endereço Residencial -->
+                                <div class="col-md-4">
+                                    <label>Endereço Residencial: </label>
+                                    <div class="resposta">Rua 10, Nº 330 Apto 3</div>
+                                </div>
+
+
+                                <!-- Bairro -->
+                                <div class="col-md-3">
+                                    <label>Bairro: </label>
+                                    <div class="resposta">Cambolo</div>
+                                </div>
+
+                                <!-- Cidade -->
+                                <div class="col-md-3">
+                                    <label>Cidade: </label>
+                                    <div class="resposta">Porto Seguro</div>
+                                </div>
+
+                                <!-- CEP -->
+                                <div class="col-md-2">
+                                    <label>CEP: </label>
+                                    <div class="resposta">45810-000</div>
+                                </div>
+
+                                <!-- Telefone -->
+                                <div class="col-md-2">
+                                    <label>Telefone: </label>
+                                    <div class="resposta">45810-000</div>
+                                </div>
+
+                                <!-- Celular -->
+                                <div class="col-md-2">
+                                    <label>Celular: </label>
+                                    <div class="resposta">45810-000</div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="col-md-2">
+                                    <label>Email: </label>
+                                    <div class="resposta">45810-000</div>
+                                </div>
+
+                                <!-- Cargo/Função -->
+                                <div class="col-md-2">
+                                    <label>Cargo/Função: </label>
+                                    <div class="resposta">Professor</div>
+                                </div>
+                            </fieldset>
+
+                            <!-- CAMPO ENSINO -->
+                            <fieldset class="bordas">
+                                <legend>3. Ensino</legend>
+                                <p>3.1 Descrição da Carga Horária</p>
+
+                                <!-- INICIO DA TABELA ENSINO -->
+                                <div class="row">
+                                    <!-- Inicio da Edição da Tabela -->
+                                    <div class="col-md-12" data-example-id="hoverable-table">
+                                        <table class="table table-bordered table-condensed table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th class="">ATIVIDADE</th>
+                                                    <th class="">DISCIPLINA</th>
+                                                    <th class="">TURMA</th>
+                                                    <th class="">CURSO</th>
+                                                    <th class="">C/H <br>SEMANAL</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Aulas</td>
+                                                    <td>Linguagem de Programação</td>
+                                                    <td>98121</td>
+                                                    <td>Técnico de Info...</td>
+                                                    <td>30</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Aulas</td>
+                                                    <td>Linguagem de Programação</td>
+                                                    <td>98121</td>
+                                                    <td>Técnico de Info...</td>
+                                                    <td>30</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Aulas</td>
+                                                    <td>Linguagem de Programação</td>
+                                                    <td>98121</td>
+                                                    <td>Técnico de Info...</td>
+                                                    <td>30</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Aulas</td>
+                                                    <td>Linguagem de Programação</td>
+                                                    <td>98121</td>
+                                                    <td>Técnico de Info...</td>
+                                                    <td>30</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Aulas</td>
+                                                    <td>Linguagem de Programação</td>
+                                                    <td>98121</td>
+                                                    <td>Técnico de Info...</td>
+                                                    <td>30</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Aulas</td>
+                                                    <td>Linguagem de Programação</td>
+                                                    <td>98121</td>
+                                                    <td>Técnico de Info...</td>
+                                                    <td>30</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- Fim do campo destinado à Tabela -->
+                                </div>
+                                <!-- FIM DA TABELA ENSINO -->
+                            </fieldset>
+
+                            <!-- CAMPO PESQUISA -->
+                            <fieldset class="bordas">
+                                <legend>4. Pesquisa</legend>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>4.1 Descrição da Carga Horária</label>
+
+                                        <!-- Título do Projeto -->
+                                        <div class="col-md-10">
+                                            <label>Título do Projeto: </label>
+                                            <div class="resposta">Desenvolvimento de Jogos em Scratch</div>
+                                        </div>
+
+                                        <!-- Carga Horária Semanal -->
+                                        <div class="col-md-2">
+                                            <label>Carga Horária Semanal:</label>
+                                            <div class="resposta">20</div>
+                                        </div>
+
+                                        <!-- Linha de Pesquisa -->
+                                        <div class="col-md-6">
+                                            <label>Linha de Pesquisa:</label>
+                                            <div class="resposta">Iniciação a Docencia</div>
+                                        </div>
+
+                                        <!-- Grupo de Pesquisa -->
+                                        <div class="col-md-6">
+                                            <label>Grupo de Pesquisa: </label>
+                                            <div class="resposta">CAPES/PIBID</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>4.2 Produtos e Resultados Esperados</label>
+
+                                        <div class="col-md-12">
+                                            <p>
+                                                Caleb (Domhnall Gleeson), um jovem programador 
+                                                de computadores, ganha um concurso na empresa onde trabalha para passar uma semana na
+                                                casa de Nathan Bateman (Oscar Isaac), o brilhante e recluso presidente da companhia.
+                                                Após sua chegada, Caleb percebe que foi o escolhido para participar de um teste com a
+                                                última criação de Nathan: Ava (Alicia Vikander), uma robô com inteligência artificial.
+                                                Mas essa criatura se apresenta sofisticada e sedutora de uma forma que inguém poderia
+                                                prever, complicando a situação ao ponto que Caleb não sabe mais em quem confiar.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <!-- CAMPO EXTENSÃO -->
+                            <fieldset class="bordas">
+                                <legend>5. Extensão</legend>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>5.1 Descrição da Carga Horária</label>
+
+                                        <!-- Título do Projeto -->
+                                        <div class="col-md-12">
+                                            <label>Curso/Serviço: </label>
+                                            <div class="resposta">Desenvolvimento de Jogos em Scratch</div>
+                                        </div>
+
+                                        <!-- Periodo -->
+                                        <div class="col-md-6">
+                                            <label>Periodo </label>
+                                            <div class="resposta">10/10/2014 a 12/02/2015</div>
+                                        </div>
+
+                                        <!-- Carga Horária Semanal -->
+                                        <div class="col-md-3">
+                                            <label>Carga Horária Semanal:</label>
+                                            <div class="resposta">20</div>
+                                        </div>
+
+                                        <!-- Carga Horária Total -->
+                                        <div class="col-md-3">
+                                            <label>Carga Horária Total:</label>
+                                            <div class="resposta">220</div>
+                                        </div>
+
+                                        <!-- Público Alvo -->
+                                        <div class="col-md-6">
+                                            <label>Público Alvo: </label>
+                                            <div class="resposta">Iniciação a Docencia</div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>5.2 Produtos e Resultados Esperados</label>
+
+                                        <div class="col-md-12">
+                                            <p>
+                                                Caleb (Domhnall Gleeson), um jovem programador 
+                                                de computadores, ganha um concurso na empresa onde trabalha para passar uma semana na
+                                                casa de Nathan Bateman (Oscar Isaac), o brilhante e recluso presidente da companhia.
+                                                Após sua chegada, Caleb percebe que foi o escolhido para participar de um teste com a
+                                                última criação de Nathan: Ava (Alicia Vikander), uma robô com inteligência artificial.
+                                                Mas essa criatura se apresenta sofisticada e sedutora de uma forma que inguém poderia
+                                                prever, complicando a situação ao ponto que Caleb não sabe mais em quem confiar.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <!-- CAMPO ATIVIADE ADMINISTRATIVA -->
+                            <fieldset class="bordas">
+                                <legend>6. Atividade Administrativa</legend>
+
+                                <div class="row">
+
+                                    <div class="col-md-12">
+                                        <!-- Título do Projeto -->
+                                        <div class="col-md-12">
+                                            <label>1. Descrição da Carga Horária</label>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <label>Função: </label>
+                                            <div class="resposta">Diretor de Ensino</div>
+                                        </div>
+
+                                        <!-- Periodo -->
+                                        <div class="col-md-5">
+                                            <label>Periodo </label>
+                                            <div class="resposta">10/10/2014 a 12/02/2015</div>
+                                        </div>
+
+                                        <!-- Carga Horária Semanal -->
+                                        <div class="col-md-2">
+                                            <label>Carga Horária Semanal:</label>
+                                            <div class="resposta">20</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>1.1. Descrição das Atividades Previstas Inerente a Função Desempenhada</label>
+
+                                        <div class="col-md-12">
+                                            <p>
+                                                Caleb (Domhnall Gleeson), um jovem programador 
+                                                de computadores, ganha um concurso na empresa onde trabalha para passar uma semana na
+                                                casa de Nathan Bateman (Oscar Isaac), o brilhante e recluso presidente da companhia.
+                                                Após sua chegada, Caleb percebe que foi o escolhido para participar de um teste com a
+                                                última criação de Nathan: Ava (Alicia Vikander), uma robô com inteligência artificial.
+                                                Mas essa criatura se apresenta sofisticada e sedutora de uma forma que inguém poderia
+                                                prever, complicando a situação ao ponto que Caleb não sabe mais em quem confiar.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>1.2. Produtos e Resultados Esperados</label>
+
+                                        <div class="col-md-12">
+                                            <p>
+                                                Caleb (Domhnall Gleeson), um jovem programador 
+                                                de computadores, ganha um concurso na empresa onde trabalha para passar uma semana na
+                                                casa de Nathan Bateman (Oscar Isaac), o brilhante e recluso presidente da companhia.
+                                                Após sua chegada, e apresenta sofisticada e sedutora de uma forma que inguém poderia
+                                                prever, complicando a situação ao ponto que Caleb não sabe mais em quem confiar.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="bordas">
+                                <legend>7. Treinamento e Aperfeiçoamento</legend>
+                                <p>7.1 Descrição da Carga Horária</p>
+
+                                <!-- INICIO DA TABELA TREINAMETO E APERFEIÇOAMENTO -->
+                                <div class="row">
+                                    <!-- Inicio da Edição da Tabela -->
+                                    <div class="col-md-12" data-example-id="hoverable-table">
+                                        <table class="table table-bordered table-condensed table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th class="">ATIVIDADE</th>
+                                                    <th class="">DESCRIÇÃO</th>
+                                                    <th class="">PERIODO</th>
+                                                    <th class="">INSTITUIÇÃO</th>
+                                                    <th class="">C/H <br>TOTAL</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Pós-graduação</td>
+                                                    <td>Mestrado em Modelagem Computacional</td>
+                                                    <td>01/02/15 a 14/06/15</td>
+                                                    <td>IFBA</td>
+                                                    <td>800</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Pós-graduação</td>
+                                                    <td>Mestrado em Modelagem Computacional</td>
+                                                    <td>01/02/15 a 14/06/15</td>
+                                                    <td>IFBA</td>
+                                                    <td>800</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- FIM DA TABELA ENSINO -->
+                                </div>
+                            </fieldset>
+
+                            <!-- CAMPO OUTRAS ATIVIDADES -->
+                            <fieldset class="bordas">
+                                <legend>8. Outras Atividades</legend>
+                                <p>8.1 Descrição da Carga Horária</p>
+
+                                <!-- INICIO DA TABELA OUTRAS ATIVIDADES -->
+                                <div class="row">
+                                    <!-- Inicio da Edição da Tabela -->
+                                    <div class="col-md-12" data-example-id="hoverable-table">
+                                        <table class="table table-bordered table-condensed table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th class="">ATIVIDADE</th>
+                                                    <th class="">DESCRIÇÃO</th>
+                                                    <th class="">PERIODO</th>
+                                                    <th class="">C/H <br>TOTAL</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Pesquisa</td>
+                                                    <td>Participação com Supervisor do PIBID - Lic. em Computação</td>
+                                                    <td>01/02/15 a 14/06/15</td>
+                                                    <td>800</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Pesquisa</td>
+                                                    <td>Participação com Supervisor do PIBID - Lic. em Quimica</td>
+                                                    <td>01/02/15 a 14/06/15</td>
+                                                    <td>800</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- Fim do campo destinado à Tabela -->
+                                </div>
+                                <!-- FIM DA TABELA OUTRAS ATIVIDADES -->
+                            </fieldset>
+
+                            <!-- CAMPO RESUMO -->
+                            <fieldset class="bordas">
+                                <legend>8. Resumo</legend>
+                                <p>Resumo das Atividades</p>
+
+                                <!-- INICIO DA TABELA RESUMO -->
+                                <div class="row">
+                                    <!-- Inicio da Edição da Tabela -->
+                                    <div class="col-md-12" data-example-id="hoverable-table">
+                                        <table class="table table-bordered table-condensed table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th class="">TIPO DE ATIVIDADE</th>
+                                                    <th class="">C/H TOTAL</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Pesquisa</td>
+                                                    <td>800</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Participação com Supervisor do PIBID - Lic. em Quimica</td>
+                                                    <td>80</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- Fim do campo destinado à Tabela -->
+                                </div>
+                                <!-- FIM DA TABELA RESUMO -->
+                            </fieldset>
+
+                            <!-- CAMPO ENTREGA E RECEBIMENTO -->
+                            <fieldset class="bordas">
+                                <legend>9. Resumo</legend>
+                                <p>Resumo das Atividades</p>
+
+                                <!-- INICIO DA TABELA RESUMO -->
+                                <div class="row">
+                                    <!-- Inicio da Edição da Tabela -->
+                                    <div class="col-md-12" data-example-id="hoverable-table">
+                                        <!-- Futuramente pode-se colocar os pareceres do pessoal do 
+                                        departamento de Ensino FeedBack -->
+                                        <table class="table table-bordered table-condensed">
+                                            <thead>
+                                                <tr>
+                                                    <th class="">Parecer do Departamento</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><br></td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td><br></td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td><br></td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td><br></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- Fim do campo destinado à Tabela -->
+                                </div>
+                                <!-- FIM DA TABELA RESUMO -->
+                            </fieldset>
+                        </div>
+                    </div>
+                    
+                    <!-- CAMPO ASSINATURAS -->
+                    <fieldset class="bordas">
+                        <legend>10. Assinaturas</legend>
+
+                        <!-- Data da Impressão -->
+                        <div class="col-md-4">
+                            <label>Data:</label>
+                            <div class="resposta">1º Semestre</div>
+                        </div>
+
+                        <!-- Recebido -->
+                        <div class="col-md-6">
+                            <label>Recebido em:</label>
+                            <div class="resposta">2015</div>
+                        </div>
+                        
+                        <!-- Assinatura Docente -->
+                        <div class="col-md-6">
+                            <label>Assinatura Docente:</label>
+                            <div class="resposta"><br></div>
+                        </div>
+
+                        <!-- Assinatura Chefia -->
+                        <div class="col-md-6">
+                            <label>Assinatura Chefia:</label>
+                            <div class="resposta"><br></div>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- BOTÕES DA PAGINA -->
+                    <div class="row">
+                        <div class="col-md-offset-10 col-md-1">
+                            <a class="btn btn-success"  href="javascript:pdfToHTML()">Exportar em PDF</a>
+                            <script src="js/jsPDF/jspdf.js" type="text/javascript"></script>
+                            <script src="js/jsPDF/pdfFromHTML.js" type="text/javascript"></script>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Area do Rodapé -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <footer class="rodape">
+                            <p>Aplicativo desenvolvido pelos alunos do curso de Licenciatura em Computação<br>
+                                <a href="#" target="_blank">@LucasMatos</a>,
+                                <a href="#" target="_blank">@KellyFreitas</a> e 
+                                <a href="#" target="_blank">@WallaceFernandes</a>.
+                            </p>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

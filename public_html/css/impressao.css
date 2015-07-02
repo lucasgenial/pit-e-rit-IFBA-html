@@ -1,0 +1,109 @@
+/*
+* Edita o body
+*/
+html{
+    position:relative;
+    min-height:100%;
+}
+
+body{
+    /*font-family: tahoma, arial, helvetica, sans-serif;*/
+    font-family: sans-serif;
+    font-size: 12px;
+    width: 100%;
+    background-color: #ffffff;
+}
+/*
+* Editar a Logo principal do sistema
+*/
+.logo-principal{
+    float: left;
+    max-height: 60px;
+}
+
+/*
+* Edita o topo
+*/
+.topo{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.bordas{
+    border: 1px solid #D6D6D6;
+    border-radius: 10px 10px 10px 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.bordas-tabelas{
+    border: 1px solid #D6D6D6;
+    border-radius: 10px 10px 10px 10px;
+    margin: 10px 5px 10px 5px;
+}
+
+.bordas-tiny{
+    border: 1px solid #D6D6D6;
+    border-radius: 10px 10px 10px 10px;
+    padding: 0px 5px 5px 5px;
+    margin: 10px 5px 10px 5px;
+}
+
+/*Coloca os nomes nas bordas*/
+fieldset legend{
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: none;
+    display: block;
+    width: auto;
+    padding: 0px 10px 0px 10px;
+    line-height: inherit;
+    color: #333;
+    border: 0px;
+    text-align:left;
+    margin-bottom: 0px;
+}
+
+/*Auterando as label*/
+label{
+    padding-top: 5px;
+    padding-bottom: 0px;
+    width: auto;
+    margin-bottom: 0px;
+}
+
+/* Edição de tabelas */
+.tabelas{
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+.table{
+    margin-bottom: 0px;
+}
+
+/**
+* Edita o Rodapé
+*/
+.rodape{
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    background-color: #4E7BA2;
+}
+
+.rodape p, .rodape a{
+    margin-top: 30px;
+    color: #fff;
+}
+
+.rodape a{
+    margin-top: 0px;
+    color: #fff;
+    text-height: inherit;
+}#DataFinal {
+
+}
