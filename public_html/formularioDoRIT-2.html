@@ -150,9 +150,9 @@
                                                     <label>Semestre</label>
                                                     <select class="form-control input-sm" required>
 
-                                                        <option>Selecione</option>
-                                                        <option>1º Semestre</option>
-                                                        <option>2º Semestre</option>
+                                                        <option value="">Selecione</option>
+                                                        <option value="1">1º Semestre</option>
+                                                        <option value="2">2º Semestre</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-md-2">
@@ -569,7 +569,7 @@
                                                             <div class="form-group">
                                                                 <label>Data Inicial</label>
                                                                 <div class='input-group date' id='DataInicial'>
-                                                                    <input id="data1" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data_01(this)"/>
+                                                                    <input id="data1" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data(this, document.getElementById('data1'), document.getElementById('data2'))"/>
                                                                     <span class="input-group-addon">
                                                                         <span class="glyphicon glyphicon-calendar small"></span>
                                                                     </span>
@@ -580,7 +580,7 @@
                                                             <div class="form-group">
                                                                 <label>Data Final</label>
                                                                 <div class='input-group date' id="DataFinal">
-                                                                    <input id="data2" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data_01(this)"/>
+                                                                    <input id="data2" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data(this, document.getElementById('data1'), document.getElementById('data2'))"/>
                                                                     <span class="input-group-addon">
                                                                         <span class="glyphicon glyphicon-calendar small"></span>
                                                                     </span>
@@ -723,7 +723,7 @@
                                                             <div class="form-group">
                                                                 <label>Data Inicial</label>
                                                                 <div class='input-group date' id='DataInicial2'>
-                                                                    <input id="data3" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data_02(this)"/>
+                                                                    <input id="data3" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data(this, document.getElementById('data3'), document.getElementById('data4'))"/>
                                                                     <span class="input-group-addon">
                                                                         <span class="glyphicon glyphicon-calendar small"></span>
                                                                     </span>
@@ -734,7 +734,7 @@
                                                             <div class="form-group">
                                                                 <label>Data Final</label>
                                                                 <div class='input-group date' id="DataFinal2">
-                                                                    <input id="data4" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data_02(this)"/>
+                                                                    <input id="data4" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data(this, document.getElementById('data3'), document.getElementById('data4'))"/>
                                                                     <span class="input-group-addon">
                                                                         <span class="glyphicon glyphicon-calendar small"></span>
                                                                     </span>
@@ -913,7 +913,7 @@
                                                                     <div class="form-group">
                                                                         <label>Data Inicial</label>
                                                                         <div class='input-group date' id='DataInicial3'>
-                                                                            <input id="data5" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data_03(this)"/>
+                                                                            <input id="data5" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data(this, document.getElementById('data5'), document.getElementById('data6'))"/>
                                                                             <span class="input-group-addon">
                                                                                 <span class="glyphicon glyphicon-calendar small"></span>
                                                                             </span>
@@ -924,7 +924,7 @@
                                                                     <div class="form-group">
                                                                         <label>Data Final</label>
                                                                         <div class='input-group date' id="DataFinal3">
-                                                                            <input id="data6" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data_03(this)" />
+                                                                            <input id="data6" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data(this, document.getElementById('data5'), document.getElementById('data6'))" />
                                                                             <span class="input-group-addon">
                                                                                 <span class="glyphicon glyphicon-calendar small"></span>
                                                                             </span>
@@ -1064,7 +1064,7 @@
                                                                     <div class="form-group">
                                                                         <label>Data Inicial</label>
                                                                         <div class='input-group date' id='DataInicial4'>
-                                                                            <input id="data7" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data_04(this)"/>
+                                                                            <input id="data7" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data(this, document.getElementById('data7'), document.getElementById('data8'))"/>
                                                                             <span class="input-group-addon">
                                                                                 <span class="glyphicon glyphicon-calendar small"></span>
                                                                             </span>
@@ -1075,7 +1075,7 @@
                                                                     <div class="form-group">
                                                                         <label>Data Final</label>
                                                                         <div class='input-group date' id="DataFinal4">
-                                                                            <input id="data8" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data_04(this)"/>
+                                                                            <input id="data8" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data(this, document.getElementById('data7'), document.getElementById('data8'))"/>
                                                                             <span class="input-group-addon">
                                                                                 <span class="glyphicon glyphicon-calendar small"></span>
                                                                             </span>
@@ -1326,7 +1326,7 @@
 
                             <!-- BOTÕES DA PAGINA -->
                             <div class="col-md-offset-8 col-md-2">
-                                <button type="button" class="btn btn-success">SALVAR</button>
+                                <button type="submit" class="btn btn-success">SALVAR</button>
                             </div>
                             <div class="col-md-2">
                                 <button type="button" onclick="Cancelar('telaRelatorioDeRIT.html')"  class="btn btn-danger">CANCELAR</button>
