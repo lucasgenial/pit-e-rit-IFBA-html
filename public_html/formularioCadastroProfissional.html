@@ -5,7 +5,7 @@
         <meta name="robots" content="ALL" />
         <title>Cadastro de Professor</title>
         <link href="img/favicon-oficial.ico" rel="icon" type="image/x-icon" />
-        <!-- Chamada do Bootstrap CSS -->
+        <!-- Chamada do Bootstrap CSS-->
         <link rel="stylesheet" href="css/bootstrap.css">
         <!-- Chamada do CSS de personalização // Sempre usar abaixo da chamada do CSS principal-->
         <link rel="stylesheet" href="css/extra.css">
@@ -112,7 +112,8 @@
                                             <label>Data de Nascimento</label>
                                             <!-- <input type="date" class="form-control input-sm" required>-->
                                             <div class='input-group date' id="DataNascimento">
-                                                <input id="data1" type='text' class="form-control input-sm" required maxlength="10" onkeyup="mascara_Validacao_Data(this)"/>
+                                                <input id="data1" type='text' class="form-control input-sm" maxlength="10"  onkeyup="mascara_Validacao_Data(this, document.getElementById('data1'),
+                               document.getElementById('null'))"/>
                                                 <span class="input-group-addon">
                                                     <!--    <span class="glyphicon glyphicon-calendar small"></span>-->
                                                     <span class="glyphicon glyphicon-calendar small"></span>
@@ -121,19 +122,19 @@
                                         </div>
                                         <div class="col-md-3">
                                             <label>CEP</label>
-                                            <input type="text" required name="cep" id="cep" size="20" maxlength="14" onkeyup="validaCEP(this)" onkeypress='return SomenteNumero(event)' class="form-control input-sm" aria-label="Informe o CEP" placeholder="Informe o CEP" >
+                                            <input type="text" name="cep" id="cep" size="20" maxlength="14" onkeyup="validaCEP(this)" onkeypress='return SomenteNumero(event)' class="form-control input-sm" aria-label="Informe o CEP" placeholder="Informe o CEP" >
                                         </div>
                                         <div class="col-md-3">
                                             <label>Cidade</label>
-                                            <input type="text" class="form-control input-sm" aria-label="Informe a cidade" placeholder="Informe a cidade" required>
+                                            <input type="text" class="form-control input-sm" aria-label="Informe a cidade" placeholder="Informe a cidade" >
                                         </div>
                                         <div class="col-md-3">
                                             <label>Bairro</label>
-                                            <input type="text" class="form-control input-sm" aria-label="Informe o bairro" placeholder="Informe o bairro" required>
+                                            <input type="text" class="form-control input-sm" aria-label="Informe o bairro" placeholder="Informe o bairro" >
                                         </div>
                                         <div class="col-md-2">
                                             <label>Logradouro</label>
-                                            <select class="form-control input-sm" required>
+                                            <select class="form-control input-sm" >
 
                                                 <option>Selecione</option>
                                                 <option>Rua</option>
@@ -143,22 +144,22 @@
                                         </div>
                                         <div class="col-md-7">
                                             <label>Nome Logradouro</label>
-                                            <input type="text" class="form-control input-sm" aria-label="Informe o nome" placeholder="Informe o nome" required>
+                                            <input type="text" class="form-control input-sm" aria-label="Informe o nome" placeholder="Informe o nome" >
                                         </div>
                                         <div class="col-md-2">
                                             <label>Número</label>
-                                            <input type="text" class="form-control input-sm" aria-label="Informe o número" placeholder="Informe o nº" required>
+                                            <input type="text" class="form-control input-sm" aria-label="Informe o número" placeholder="Informe o nº" >
                                         </div>
                                         <div class="col-md-12">
                                             <fieldset class="bordas">
                                                 <legend>a. Contato</legend>
                                                 <div class="col-md-4">
                                                     <label>Telefone</label>
-                                                    <input type="text" name="telefone" id="telefone" size="20" maxlength="15" onkeypress="validaTelefoneCelular(this)" class="form-control input-sm" aria-label="Informe o telefone" placeholder="Informe o telefone" required>
+                                                    <input type="text" name="telefone" id="telefone" size="20" maxlength="15" onkeydown="return SomenteNumero(event)" onkeypress="validaTelefoneCelular(this)" class="form-control input-sm" aria-label="Informe o telefone" placeholder="Informe o telefone" required>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label>Celular</label>
-                                                    <input type="text" name="celular" id="celular" size="20" maxlength="15" onkeypress="validaTelefoneCelular(this)" class="form-control input-sm" aria-label="Informe o celular" placeholder="Informe o celular" required>
+                                                    <input type="text" name="celular" id="celular" size="20" maxlength="15" onkeydown="return SomenteNumero(event)" onkeypress="validaTelefoneCelular(this)" class="form-control input-sm" aria-label="Informe o celular" placeholder="Informe o celular" required>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label>Email</label>
@@ -170,12 +171,12 @@
                                             <fieldset class="bordas">
                                                 <legend> b. Dados Profissionais</legend>
                                                 <div class="col-md-2">
-                                                    <label>Nº SIAPI</label>
+                                                    <label>Nº SIAPE</label>
                                                     <input type="text" class="form-control input-sm" aria-label="..." placeholder="matricula" required>
                                                 </div>
                                                 <div class="col-md-2">
                                                     <label>Classe</label>
-                                                    <select class="form-control input-sm" required>
+                                                    <select required class="form-control input-sm" >
                                                         <option>Selecione</option>
                                                         <option>D1</option>
                                                         <option>D2</option>
@@ -223,7 +224,7 @@
                             </div>
                             <!-- BOTÕES DA PAGINA -->
                             <div class="col-md-offset-8 col-md-2">
-                                <button type="button" class="btn btn-success">SALVAR</button>
+                                <button type="submit" class="btn btn-success">SALVAR</button>
                             </div>
                             <div class="col-md-2">
                                 <button type="button" onclick="Cancelar('telaRelatorioDeProfessores.html')" class="btn btn-danger">CANCELAR</button>

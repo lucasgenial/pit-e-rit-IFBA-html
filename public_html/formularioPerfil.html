@@ -124,17 +124,17 @@
                                         <div class="col-md-2">
                                             <label>Sexo</label>
                                             <select class="form-control input-sm" required>
-                                                <option>Selecione</option>
-                                                <option>Feminino</option>
-                                                <option>Masculino</option>
-                                                <option>Outros</option>
+                                                <option value="">Selecione</option>
+                                                <option value="1">Feminino</option>
+                                                <option value="2">Masculino</option>
+                                                <option value="3">Outros</option>
                                             </select>
                                         </div>
 
                                         <div class="col-md-3">
                                             <label>Data de Nascimento</label>
                                             <div class='input-group date' id="DataNascimento">
-                                                <input id="data1" type='text' class="form-control input-sm" maxlength="10" onkeyup="mascara_Validacao_Data(this)"/>
+                                                <input id="data1" type='text' class="form-control input-sm" maxlength="10" required onkeyup="mascara_Validacao_Data(this, document.getElementById('data1'), document.getElementById('null'))"/>
                                                 <span class="input-group-addon">
                                                     <!--    <span class="glyphicon glyphicon-calendar small"></span>-->
                                                     <span class="glyphicon glyphicon-calendar small"></span>
@@ -160,10 +160,10 @@
                                         <div class="col-md-2">
                                             <label>Logradouro</label>
                                             <select class="form-control input-sm" required>
-                                                <option>Selecione</option>
-                                                <option>Rua</option>
-                                                <option>Avenida</option>
-                                                <option>Praça</option>
+                                                <option value="">Selecione</option>
+                                                <option value="1">Rua</option>
+                                                <option value="2">Avenida</option>
+                                                <option value="3">Praça</option>
                                             </select>
                                         </div>
 
@@ -182,12 +182,12 @@
                                                 <legend>a. Contato</legend>
                                                 <div class="col-md-4">
                                                     <label>Telefone</label>
-                                                    <input type="text" class="form-control input-sm"  maxlength="15" placeholder="Informe o telefone" required onkeypress="validaTelefoneCelular(this)">
+                                                    <input type="text" class="form-control input-sm"  maxlength="15" placeholder="Informe o telefone" required onkeydown="return SomenteNumero(event)" onkeypress="validaTelefoneCelular(this)">
                                                 </div>
 
                                                 <div class="col-md-4">
                                                     <label>Celular</label>
-                                                    <input type="text" class="form-control input-sm" maxlength="15" placeholder="Informe o celular" required onkeypress="validaTelefoneCelular(this)">
+                                                    <input type="text" class="form-control input-sm" maxlength="15" placeholder="Informe o celular" required onkeydown="return SomenteNumero(event)" onkeypress="validaTelefoneCelular(this)">
                                                 </div>
 
                                                 <div class="col-md-4">
