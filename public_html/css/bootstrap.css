@@ -1072,13 +1072,15 @@ th {
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
-          box-sizing: border-box;
+          
+  box-sizing: border-box;
 }
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
-          box-sizing: border-box;
+          
+  box-sizing: border-box;
 }
 html {
   font-size: 10px;
@@ -1088,7 +1090,7 @@ html {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 1.42857143;
+  line-height: 1.4;
   color: #333;
   background-color: #fff;
 }
@@ -2900,6 +2902,10 @@ select[multiple].form-group-lg .form-control {
   margin-bottom: 10px;
   color: #737373;
 }
+
+small.help-block {}
+
+small.help-block {}
 @media (min-width: 768px) {
   .form-inline .form-group {
     display: inline-block;

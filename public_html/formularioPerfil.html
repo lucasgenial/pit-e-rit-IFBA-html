@@ -5,40 +5,49 @@
         <meta name="robots" content="ALL" />
         <title>Cadastro de Professor</title>
         <link href="img/favicon-oficial.ico" rel="icon" type="image/x-icon" />
-
-        <!-- Chamada do Bootstrap CSS -->
+        
+        <!-- Chamada do Bootstrap CSS-->
         <link rel="stylesheet" href="css/bootstrap.css">
-
+        
         <!-- Chamada do CSS de personalização // Sempre usar abaixo da chamada do CSS principal-->
         <link rel="stylesheet" href="css/extra.css">
-
+        
+        <!-- Chamada o CSS do FormValidation -->
+        <link href="js/formvalidation/css/formValidation.css" rel="stylesheet" type="text/css"/>
+        <link href="js/formvalidation/css/bootstrapValidator.css" rel="stylesheet" type="text/css"/>
+        
         <!-- Chamada para o JQUERY -->
         <script src="js/jquery-1.11.3.js"></script>
-
+        
+        <!-- Chamada do JavaScript do Plugin Moment -->
+        <script src="js/datepicker/moment-with-locales.js" type="text/javascript"></script>
+        
         <!-- Chamada do JavaScript do Bootstrap -->
         <script src="js/bootstrap.js"></script>
-
+        
         <!-- Chamada do JavaScript do TinyMCE -->
         <script src="js/tinymce/tinymce.min.js" type="text/javascript"></script>
         <script src="js/tinymce/tinymce_config.js" type="text/javascript"></script>
-
+        
         <!-- Chamada dos Scripts das datas -->
         <link href="js/datepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css"/>
         <script src="js/datepicker/moment-with-locales.js" type="text/javascript"></script>
         <script src="js/datepicker/js/bootstrap-datetimepicker.js" type="text/javascript"></script>
-        <!--        <script src="js/datepicker/bootstrap-datetimepicker-config.js" type="text/javascript"></script>-->
-
+        <script src="js/datepicker/bootstrap-datetimepicker-config.js" type="text/javascript"></script>
+        
         <!-- Chamada dos Scripts do file Input -->
         <link href="js/file-input/css/fileinput.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="css/impressao.css" type="text/css">
-        <link rel="stylesheet" href="css/impressao.css" type="text/css"/>
-
-
         <script src="js/file-input/js/fileinput.js" type="text/javascript"></script>
         <script src="js/file-input/js/fileinput_locale_pt-BR.js" type="text/javascript"></script>
-        <!--        Validação dos campos-->
-        <script language="javascript" src="Validacoes/validacoes.js"></script>
 
+        <!-- Chamada dos Scripts de Validação do FormValidations.io -->
+        <script src="js/formvalidation/js/formValidation.js" type="text/javascript"></script>
+        <script src="js/formvalidation/js/framework/bootstrap.js" type="text/javascript"></script>
+        <script src="js/formvalidation/js/language/pt_BR.js" type="text/javascript"></script>
+        
+        <!-- Validação -->
+        <script src="js/formvalidation/mask.js" type="text/javascript"></script>
+        <script src="js/formvalidation/validacao_2.js" type="text/javascript"></script>
     </head>
     <body>
 
@@ -109,167 +118,156 @@
                     <!-- Cria-se a DIV branca -->
                     <div class="col-md-offset-2 col-md-8 principal-branco">
                         <!-- Inicio do Formulário -->
-
-                        <form>
+                        <form id="formPerfil" method="POST">
                             <div class="row">
                                 <div class="col-md-12">
                                     <fieldset class="bordas">
                                         <legend>1. Dados Pessoais</legend>
-
-                                        <div class="col-md-10">
+                                        
+                                        <div class="col-md-7">
                                             <label>Nome</label>
-                                            <input type="text" class="form-control input-sm" placeholder="Informe o nome" required onkeypress='return soLetras(event)'>
+                                            <input type="text" class="form-control input-sm" name="nome" required>
                                         </div>
-
+                                        
+                                        <div class="col-md-3">
+                                            <label>CPF</label>
+                                            <input type="text" class="form-control input-sm" name="cpf" disabled>
+                                        </div>
+                                        
                                         <div class="col-md-2">
                                             <label>Sexo</label>
-                                            <select class="form-control input-sm" required>
+                                            <select class="form-control input-sm">
                                                 <option value="">Selecione</option>
-                                                <option value="1">Feminino</option>
-                                                <option value="2">Masculino</option>
-                                                <option value="3">Outros</option>
+                                                <option value="Feminino">Feminino</option>
+                                                <option value="Masculino">Masculino</option>
+                                                <option value="Outro">Outro</option>
                                             </select>
                                         </div>
-
+                                        
                                         <div class="col-md-3">
                                             <label>Data de Nascimento</label>
-                                            <div class='input-group date' id="DataNascimento">
-                                                <input id="data1" type='text' class="form-control input-sm" maxlength="10" required onkeyup="mascara_Validacao_Data(this, document.getElementById('data1'), document.getElementById('null'))"/>
+                                            <div class="input-group date" id="dataNascimento" >
+                                                <input type="text" class="form-control input-sm datas" />
                                                 <span class="input-group-addon">
-                                                    <!--    <span class="glyphicon glyphicon-calendar small"></span>-->
                                                     <span class="glyphicon glyphicon-calendar small"></span>
                                                 </span>
                                             </div>
                                         </div>
-
                                         <div class="col-md-3">
                                             <label>CEP</label>
-                                            <input type="text" class="form-control input-sm" placeholder="Informe o CEP" required onkeyup="validaCEP(this)" onkeypress='return SomenteNumero(event)'>
+                                            <input type="text" name="cep" id="cep" class="form-control input-sm" />
                                         </div>
-
                                         <div class="col-md-3">
                                             <label>Cidade</label>
-                                            <input type="text" class="form-control input-sm" placeholder="Informe a cidade" required>
+                                            <input type="text" name="cidade" class="form-control input-sm" />
                                         </div>
-
                                         <div class="col-md-3">
                                             <label>Bairro</label>
-                                            <input type="text" class="form-control input-sm" placeholder="Informe o bairro" required>
+                                            <input type="text" name="bairro" class="form-control input-sm" />
                                         </div>
-
                                         <div class="col-md-2">
                                             <label>Logradouro</label>
-                                            <select class="form-control input-sm" required>
+                                            <select class="form-control input-sm" >
                                                 <option value="">Selecione</option>
-                                                <option value="1">Rua</option>
-                                                <option value="2">Avenida</option>
-                                                <option value="3">Praça</option>
+                                                <option value="Rua">Rua</option>
+                                                <option value="Avenida">Avenida</option>
+                                                <option value="Praca">Praça</option>
                                             </select>
                                         </div>
-
                                         <div class="col-md-7">
                                             <label>Nome Logradouro</label>
-                                            <input type="text" class="form-control input-sm"  placeholder="Informe o logradouro" required>
+                                            <input type="text" name="nomeLogradouro" class="form-control input-sm" />
                                         </div>
-
                                         <div class="col-md-2">
                                             <label>Número</label>
-                                            <input type="text" class="form-control input-sm"  placeholder="Informe o n°" required>
+                                            <input type="text" name="numero" class="form-control input-sm">
                                         </div>
-
                                         <div class="col-md-12">
                                             <fieldset class="bordas">
                                                 <legend>a. Contato</legend>
                                                 <div class="col-md-4">
                                                     <label>Telefone</label>
-                                                    <input type="text" class="form-control input-sm"  maxlength="15" placeholder="Informe o telefone" required onkeydown="return SomenteNumero(event)" onkeypress="validaTelefoneCelular(this)">
+                                                    <input type="text" name="telefone" class="form-control input-sm" >
                                                 </div>
-
                                                 <div class="col-md-4">
                                                     <label>Celular</label>
-                                                    <input type="text" class="form-control input-sm" maxlength="15" placeholder="Informe o celular" required onkeydown="return SomenteNumero(event)" onkeypress="validaTelefoneCelular(this)">
+                                                    <input type="text" name="celular" class="form-control input-sm" >
                                                 </div>
-
                                                 <div class="col-md-4">
                                                     <label>Email</label>
-                                                    <input type="email" class="form-control input-sm"  placeholder="Informe o email" required>
+                                                    <input type="email" name="email" class="form-control input-sm emailPrincipal" >
                                                 </div>
                                             </fieldset>
                                         </div>
-
                                         <div class="col-md-12">
                                             <fieldset class="bordas">
                                                 <legend> b. Dados Profissionais</legend>
-
                                                 <div class="col-md-2">
-                                                    <label>Nº SIAPI</label>
-                                                    <input type="text" class="form-control input-sm" aria-label="..." placeholder="matricual" disabled>
+                                                    <label>Nº SIAPE</label>
+                                                    <input type="text" class="form-control input-sm" name="matricula">
                                                 </div>
                                                 <div class="col-md-2">
                                                     <label>Classe</label>
-                                                    <select class="form-control input-sm" disabled>
-                                                        <option></option>
-                                                        <option>D1</option>
-                                                        <option>D2</option>
-                                                        <option>D3</option>
+                                                    <select class="form-control input-sm">
+                                                        <option value="">Selecione</option>
+                                                        <option value="d1">D1</option>
+                                                        <option value="d2">D2</option>
+                                                        <option value="d3">D3</option>
                                                     </select>
                                                 </div>
-
                                                 <div class="col-md-2">
-                                                    <label>Nível</label>
-                                                    <select class="form-control input-sm" disabled>
-                                                        <option></option>
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
+                                                    <label>Nível</label >
+                                                    <select class="form-control input-sm">
+                                                        <option value="">Selecione</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
                                                     </select>
                                                 </div>
-
                                                 <div class="col-md-4">
                                                     <label>Regime de Trabalho</label>
-                                                    <select class="form-control input-sm" disabled>
-                                                        <option></option>
-                                                        <option>Dedicação Exclusiva</option>
-                                                        <option>Dedicação extra</option>
-                                                        <option>Outras Opções</option>
+                                                    <select class="form-control input-sm">
+                                                        <option value="">Selecione</option>
+                                                        <option value="dedicacao exclusiva">Dedicação Exclusiva</option>
+                                                        <option value="dedicacao extra">Dedicação extra</option>
+                                                        <option value="outras">Outras Opções</option>
                                                     </select>
                                                 </div>
-
                                                 <div class="col-md-4">
                                                     <label>C/Horária</label>
-                                                    <select class="form-control input-sm" disabled>
-                                                        <option></option>
-                                                        <option>40</option>
-                                                        <option>20</option>
+                                                    <select class="form-control input-sm">
+                                                        <option value="">Selecione</option>
+                                                        <option value="40">40</option>
+                                                        <option value="20">20</option>
                                                     </select>
                                                 </div>
-
                                                 <div class="col-md-4">
                                                     <label>Função/Cargo</label>
-                                                    <select class="form-control input-sm" disabled>
-                                                        <option></option>
-                                                        <option>Professor</option>
-                                                        <option>Diretor</option>
+                                                    <select class="form-control input-sm">
+                                                        <option value="">Selecione</option>
+                                                        <option value="professor">Professor</option>
+                                                        <option value="diretor">Diretor</option>
                                                     </select>
                                                 </div>
                                             </fieldset>
                                         </div>
+                                        
                                         <div class="col-md-12">
                                             <fieldset class="bordas">
                                                 <legend>c. Alterar Login/Senha</legend>
                                                 <div class="col-md-4">
                                                     <label>Senha Antiga</label>
-                                                    <input type="password" class="form-control input-sm" placeholder="Informe a antiga senha" required>
+                                                    <input type="password" class="form-control input-sm" name="senhaAntiga">
                                                 </div>
 
                                                 <div class="col-md-4">
                                                     <label>Nova Senha</label>
-                                                    <input type="password" class="form-control input-sm" placeholder="Informe a nova senha" required>
+                                                    <input type="password" class="form-control input-sm" name="senhaNova">
                                                 </div>
 
                                                 <div class="col-md-4">
                                                     <label>Confirme a nova Senha:</label>
-                                                    <input type="password" class="form-control input-sm"  placeholder="Confirme a nova senha" required>
+                                                    <input type="password" class="form-control input-sm" name="confirmeSenhaNova">
                                                 </div>
 
 

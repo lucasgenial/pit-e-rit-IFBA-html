@@ -1,6 +1,6 @@
 tinymce.init({
     skin: 'light',
-    selector: "textarea",
+    selector: "textarea.editor",
     theme: "modern",
     plugins: [
         "advlist autolink link image lists charmap print preview pagebreak",
